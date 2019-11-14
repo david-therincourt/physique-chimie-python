@@ -1,6 +1,6 @@
-===========================================
-Bilan énergétique d'un mouvement rectiligne
-===========================================
+================================================================
+Bilan énergétique d'un mouvement rectiligne (classe de première)
+================================================================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 
@@ -20,18 +20,18 @@ Avant que l'élastique soit tendu
 
    import matplotlib.pyplot as plt
    plt.rcParams['figure.dpi'] = 100
-   
+
    m,g,h0 = 80,9.81,0
-   
+
    Epp=[-m*g*h0]
    Ec=[m*g*h0]
    H=[h0]
-   
+
    for h in range(0,24):
        H.append(h)
        Epp.append(-m*g*h)
        Ec.append(m*g*h)
-   
+
    plt.plot(H,Epp,label='Epp')
    plt.plot(H,Ec,label='Ec')
    plt.xlabel('Hauteur de chute (m)')
@@ -59,14 +59,14 @@ Chute complète
 
    import matplotlib.pyplot as plt
    plt.rcParams['figure.dpi'] = 100
-   
+
    m,g,h0,l0,k = 80,9.81,0,24,45
-   
+
    Epp=[-m*g*h0]
    Ec=[m*g*h0]
    Epe=[0]
    H=[h0]
-   
+
    for h in range(1,81):
        H.append(h)
        Epp.append(-m*g*h)
@@ -76,7 +76,7 @@ Chute complète
        else:
            Epe.append(0.5*k*(h-l0)**2)
            Ec.append(m*g*h-0.5*k*(h-l0)**2)
-   
+
    plt.plot(H,Epp,label='Epp')
    plt.plot(H,Ec,label='Ec')
    plt.plot(H,Epe,label='Ece')

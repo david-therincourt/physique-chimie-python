@@ -1,6 +1,6 @@
-===============================
-Évolution d'un système chimique
-===============================
+=====================================================
+Évolution d'un système chimique  (classe de première)
+=====================================================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 
@@ -12,11 +12,11 @@
 
    import numpy as np
    import matplotlib.pyplot as plt
-   
-   
+
+
    a,b,c,d = 1,2,1,2           # Nombres stoechiométriques
    niA,niB,niC,niD = 4,4,0,0   # quantité de matière initiale de l'espèce chimique A
-   
+
    # Calcul de l'avancement maximal xMax
    xMax1 = niA/a
    xMax2 = niB/b
@@ -30,9 +30,9 @@
        xMax = xMax1
        print("Les espèces A et B sont tous les deux réactifs limitant donc xmax = ", xMax, " mol")
        print("Les espèces A et B sont en proportion stoechiométrique !")
-       
+
    # Tracé de l'évolution du système chimique
-       
+
    x = np.linspace(0,xMax,10)
    nA = niA-a*x
    nB = niB-b*x

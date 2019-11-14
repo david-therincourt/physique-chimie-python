@@ -1,6 +1,6 @@
-==================================================
-Evolution temporelle d'une transformation chimique
-==================================================
+========================================================================
+Evolution temporelle d'une transformation chimique (classe de terminale)
+========================================================================
 
 .. topic:: Programme de classe terminale, enseignement de spécialité, voie générale
 

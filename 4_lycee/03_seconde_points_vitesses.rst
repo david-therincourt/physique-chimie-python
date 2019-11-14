@@ -1,6 +1,6 @@
-======================================
-Mouvement d'un point : vecteur vitesse
-======================================
+===========================================================
+Mouvement d'un point : vecteur vitesse  (classe de seconde)
+===========================================================
 
 .. topic:: Programme de seconde générale et technologique 2019.
 
@@ -9,16 +9,16 @@ Mouvement d'un point : vecteur vitesse
 :Script Python:
 
 .. code:: python
-   
+
    import numpy as np
    import matplotlib.pyplot as plt
    plt.rcParams['figure.dpi'] = 100
-   
+
    # Données
    dt = 0.0667
    x = np.array([0.003,0.141,0.275,0.410,0.554,0.686,0.820,0.958,1.089,1.227,1.359,1.490,1.599,1.705,1.801])
    y = np.array([0.746,0.990,1.175,1.336,1.432,1.505,1.528,1.505,1.454,1.355,1.207,1.018,0.797,0.544,0.266])
-   
+
    # Calculs des vecteurs vitesses
    N = len(x)         # Nombre de points de mesures
    vx = np.zeros(N)   # Initialisation d'un tableau vide
@@ -26,10 +26,10 @@ Mouvement d'un point : vecteur vitesse
    for i in range(1,N-1):
        vx[i]=(x[i+1]-x[i-1])/(2*dt)
        vy[i]=(y[i+1]-y[i-1])/(2*dt)
-   
+
    # Calcul des vitesses
    v = np.sqrt(vx**2+vy**2)
-   
+
    plt.plot(x,y,'.')
    plt.xlabel('x (m)')
    plt.xlim(0,2)
@@ -41,7 +41,7 @@ Mouvement d'un point : vecteur vitesse
        plt.annotate(i,(x[i]-0.05,y[i]-0.15))
        print('Point',i,'-> v=',round(v[i],2)," m/s")
    plt.show()
-   
+
 :Résultats:
 
 .. code::

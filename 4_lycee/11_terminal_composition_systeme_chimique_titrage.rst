@@ -1,6 +1,6 @@
-============================================
-Titrage - Evolution des quantités de matière
-============================================
+==================================================================
+Titrage - Evolution des quantités de matière (classe de terminale)
+==================================================================
 
 .. topic:: Programme de classe terminale, enseignement de spécialité, voie générale
 

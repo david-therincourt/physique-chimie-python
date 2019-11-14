@@ -1,6 +1,6 @@
-================================
-Histogramme d'un série de mesure
-================================
+======================================================
+Histogramme d'un série de mesure (classe de terminale)
+======================================================
 
 .. topic:: Programme de classe terminale, enseignement de spécialité, voie générale
 

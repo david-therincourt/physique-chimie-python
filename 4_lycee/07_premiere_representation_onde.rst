@@ -1,5 +1,6 @@
-Représenter une onde
-====================
+===============================================
+Représentation d'une onde  (classe de première)
+===============================================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 
