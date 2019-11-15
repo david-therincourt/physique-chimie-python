@@ -1,6 +1,6 @@
-=====================================================
-Évolution d'un système chimique  (classe de première)
-=====================================================
+===============================
+Évolution d'un système chimique
+===============================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 

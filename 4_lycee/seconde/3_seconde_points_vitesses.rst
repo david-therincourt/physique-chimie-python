@@ -1,6 +1,6 @@
-===========================================================
-Mouvement d'un point : vecteur vitesse  (classe de seconde)
-===========================================================
+======================================
+Mouvement d'un point : vecteur vitesse
+======================================
 
 .. topic:: Programme de seconde générale et technologique 2019.
 

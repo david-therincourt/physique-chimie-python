@@ -1,6 +1,6 @@
-===============================================
-Caractéristique d'un dipôle (classe de seconde)
-===============================================
+===========================
+Caractéristique d'un dipôle
+===========================
 
 .. topic:: Programme de seconde générale et technologique 2019.
 

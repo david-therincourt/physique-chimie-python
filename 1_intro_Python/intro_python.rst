@@ -5,6 +5,13 @@ Introduction à Python
 Qu'est-ce que Python ?
 ======================
 
+.. image:: images/Python_logo.png
+   :width: 240 px
+   :height: 240 px
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
 Créer en 1991 par Guido van Rossum, Python est un langage de programmation très proche du langage algorithme (langage naturel). Cette particularité fait de Python un langage simple à apprendre et à utiliser. Performant, multiplateforme et sous licence libre, il est devenu le langage le plus utilisé au monde (devant C, C++, JAVA, ...) aussi bien dans l'éducation, la recherche et l'industrie.
 
 L'environnement Python est très riche. En plus du langage de base, il existe une multitudes de **librairies** (modules) qui lui ajoutent des fonctionnalités dans des domaines très variés. Par exemple, avec les trois modules **Numpy**, **Matplotlib** et **Scypi**, Python est devenu une sérieuse alternative à des langages scientifiques comme Matlab ou Scilab.

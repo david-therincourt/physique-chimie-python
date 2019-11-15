@@ -1,6 +1,6 @@
-================================================================
-Bilan énergétique d'un mouvement rectiligne (classe de première)
-================================================================
+===========================================
+Bilan énergétique d'un mouvement rectiligne
+===========================================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 

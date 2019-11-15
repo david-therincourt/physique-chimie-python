@@ -1,7 +1,6 @@
-====================================================
-Mouvement d'un point : positions (classe de seconde)
-====================================================
-
+================================
+Mouvement d'un point : positions
+================================
 .. topic:: Programme de seconde générale et technologique 2019.
 
    "Représenter les positions successives d’un système modélisé par un point lors

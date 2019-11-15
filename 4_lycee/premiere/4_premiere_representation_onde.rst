@@ -1,6 +1,6 @@
-===============================================
-Représentation d'une onde  (classe de première)
-===============================================
+=========================
+Représentation d'une onde
+=========================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 

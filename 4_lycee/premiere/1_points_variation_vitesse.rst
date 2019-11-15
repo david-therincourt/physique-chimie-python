@@ -1,6 +1,6 @@
-=====================================================================
-Mouvement d'un point : vecteur variation vitesse (classe de première)
-=====================================================================
+================================================
+Mouvement d'un point : vecteur variation vitesse
+================================================
 
 .. topic:: Programme de première générale - Enseignement de spécialité - 2019
 
