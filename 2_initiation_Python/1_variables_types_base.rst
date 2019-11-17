@@ -5,31 +5,21 @@ Variables et types de base
 Qu'est-ce qu'une variable ?
 ---------------------------
 
-Une variable est un **emplacement  mémoire** dans l'ordinateur prévu pour contenir des données ;
+Une variable est un **emplacement  mémoire** dans l'ordinateur prévu pour contenir des données.
 
-
-
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> a = 3
    >>> nom = "Newton"
 
-* Une variable **identifiée** par un nom ;
-* Le signe ``=`` permet l'**affection** d'une valeur à une variable.
-* Son contenu est **modifiable** pendant l'exécution du programme.
-
-
-
-
+* Une variable est **identifiée** par un nom ;
+* Le signe ``=`` permet **l'affection** d'une valeur à une variable.
+* Le contenu d'une variable est **modifiable pendant l'exécution** du programme.
 
 Affichage d'une variable
 ------------------------
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> a = 3
    >>> print(a)
@@ -46,14 +36,12 @@ Affichage d'une variable
 Les types d'une variable
 ------------------------
 
-Contrairement à d'autres langage de programmation, il n'est pas nécessaire de donner le type d'une variable à sa déclaration en Python.
+Contrairement à d'autres langage de programmation comme C/C++ (ex. Arduino), il n'est **pas nécessaire de préciser le type d'une variable** lors de sa déclaration en Python.
 
 Les entiers
 ~~~~~~~~~~~
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> type(10)
    <class 'int'>
@@ -62,9 +50,9 @@ Les entiers
    <class 'int'>
 
 * La fonction ``type()`` donne le type d'une expression ou d'une variable.
-* ``int`` pour `integer` (entier).
+* Le mot clé ``int`` pour `integer` signifie que la variable contient un entier.
 
-.. code:: python
+.. code-block:: python
 
    >>> b = 3
    >>> a+b
@@ -76,13 +64,12 @@ Les entiers
    >>> a%b
    1
 
-
 * Les **opérateurs mathématiques** s'appliquent normalement.
 * L'opérateur ``//`` donne le **quotient** de la division entière.
 * L'opérateur ``%`` (modulo) donne le **reste** de la division entière.
 
    ====== ===============================
-   Opérateurs mathématiques
+   Opérateurs mathématiques en Python
    --------------------------------------
    ``+``  Addition
    ``-``  Soustraction
@@ -90,52 +77,48 @@ Les entiers
    ``/``  Division
    ``//`` Quotient de la division entière
    ``%``  Reste de la division entière
-   ``**`` Elever à la puissance
+   ``**`` Élever à la puissance
    ====== ===============================
 
 Les flottants
 ~~~~~~~~~~~~~
 
-Un flottant est un **nombre à virgule**.
+Un flottant est un **nombre à virgule** (nombre décimal).
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> type(9.80665)
    <class 'float'>
 
-* Le type ``float`` pour les nombres à virgule flottante.
+Le type ``float`` pour les nombres à virgule flottante.
 
-.. code:: python
+.. code-block:: python
 
    >>> g = 9.80665
    >>> round(g,2)  
-   9,81
+   9.81
    >>> m = 25
    >>> P = m*g
    >>> print(P)
    245.16625
 
-* La fonction ``round(x,n)`` arrondie la valeur flottante ``x`` à ``n`` chiffres après le virgule.
+La fonction ``round(x,n)`` arrondie la valeur flottante ``x`` à ``n`` chiffres après le virgule.
 
 Les booléens
 ~~~~~~~~~~~~
 
-Les valeurs ``True`` (vrai) ou ``False`` (faux).
+Un booléen est un type de variable logique à deux états : vrai ou faux.
 
-:Exemple:
+.. code-block:: python
 
-.. code:: python
-
-   >> type(True)
+   >>> type(True)
    <class 'bool'>
    >>> type(False)
    <class 'bool'>
 
-:Exemple:
+Un booléen prend les valeurs ``True`` (vrai) ou ``False`` (faux).
 
-.. code:: python
+.. code-block:: python
 
    >>> 3>2
    True
@@ -144,10 +127,10 @@ Les valeurs ``True`` (vrai) ou ``False`` (faux).
    >>> 3 == 2
    False
 
-* Les opérateurs de comparaison renvoient un booléen (``True`` ou ``False``)
+Les opérateurs de comparaison renvoient un booléen (``True`` ou ``False``)
 
    ====== =====================
-   Opérateurs de comparaison
+   Opérateurs de comparaison en Python
    ----------------------------
    ``>``  Strictement supérieur
    ``<``  Strictement inférieur
@@ -157,10 +140,7 @@ Les valeurs ``True`` (vrai) ou ``False`` (faux).
    ``!=`` Différent de
    ====== =====================
 
-:Exemple:
-
-
-.. code:: python
+.. code-block:: python
 
    >>> True and True
    True
@@ -169,12 +149,10 @@ Les valeurs ``True`` (vrai) ou ``False`` (faux).
    >>> not False
    True
 
-* Quelques opérateurs booléens.
-
-
+Les mots clés ``and`` et ``not`` sont des opérateurs logiques.
 
    =======  ===================
-   Opérateurs booléens
+   Opérateurs logiques en Python
    ----------------------------
    ``and``  ET logique
    ``or``   OU logique
@@ -184,11 +162,9 @@ Les valeurs ``True`` (vrai) ou ``False`` (faux).
 Les chaines de caractères
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Les chaines de caractères sont délimitées par les caractères ``'`` ou ``"``.
+Une chaine de caractères est un **ensemble de caractères**.
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> type("Bonjour")
    <class 'str'>
@@ -197,8 +173,9 @@ Les chaines de caractères sont délimitées par les caractères ``'`` ou ``"``.
    Bonjour
 
 * Le type ``str`` pour *string* (chaine de caractères).
+* Les chaines de caractères sont toujours délimitées par les caractères ``'`` ou ``"``.
 
-.. code:: python
+.. code-block:: python
 
    >>> ch2 = "Paul"
    >>> ch1 + ch2
@@ -207,19 +184,97 @@ Les chaines de caractères sont délimitées par les caractères ``'`` ou ``"``.
    >>> print(ch3)
    Bonjour Paul
 
-* Ici l'opérateur ``+`` réalise la **concaténation** de chaines de caractères.
+L'opérateur ``+`` réalise la **concaténation** de chaines de caractères.
 
-:Exemple:
+.. code-block:: python
 
-.. code:: python
+   m = 50
+   >>> g = 9.81
+   >>> P = m*g
+   >>> reponse = 'Une masse de ' + m + ' kg a un poids de ' + P + ' N sur Terre !'
+   Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+   TypeError: can only concatenate str (not "int") to str
+   >>> reponse = 'Une masse de ' + str(m) + ' kg a un poids de ' + str(P) + ' N sur Terre !'
+   >>> reponse
+   'Une masse de 50 kg a un poids de 490.5 N sur Terre !'
+
+* Il n'est pas possible de concaténer des chaines de caractères avec d'autres types !
+* La fonction ``str()`` permet la **conversion** de tout type en chaine de caractères (``string``).
+
+.. code-block:: python
 
    >>> m = 50
    >>> g = 9.81
    >>> P = m*g
-   >>> print('Une masse de ' + str(m) + ' kg a un poids de ' + str(P) + ' N sur Terre !')
-   Une masse de 50 kg a un poids de 490.5 N sur Terre !
+   >>> print('Une masse de ', m, ' kg a un poids de ', P, ' N sur Terre !')
+   Une masse de  50  kg a un poids de  490.5  N sur Terre !
+
+* La fonction ``print()`` permet l'affichage de tout type en texte.
+* Les différents types sont séparés par une virgule ``,``.
+* A l'affichage, un espace est ajouté pour chaque virgule.
+
+Saisir le contenu d'une variable
+--------------------------------
+
+En python, il est possible de demander à l'utilisateur du programme de saisir un texte au clavier.
+
+.. code-block:: python
+
+   >>> rep = input()
+   Bonjour
+   >>> rep
+   'Bonjour'
+
+* La fonction ``input()`` renvoie la chaine de caractères saisie au clavier par l'utilisateur.
+* Le chaine de caractère est affectée à la variable ``rep``.
+
+.. code-block:: python
+
+   >>> mon = input('Quel est votre nom ? ')
+   Quel est votre nom ? David
+   >>> mon
+   'David'
+
+Il est possible d'ajouter un texte lors de la saisie par l'utilisateur.
+
+.. code-block:: python
+
+   >>> n = input('Entrer un entier : ')
+   Entrer un entier : 5
+   >>> n
+   '5'
+   >>> n*3
+   '555'
+
+Attention, la fonction ``input()`` en **renvoie qu'une chaine de caractères** !
+
+.. code-block:: python
+
+   >>> rep = input('Entrer un entier : ')
+   Entrer un entier : 5
+   >>> rep
+   '5'
+   >>> n = int(rep)
+   >>> n
+   5
+   >>> n*3
+   15
+
+La fonction ``int()`` convertit nombre entier sous la forme d'une chaine de caractères en type entier.
+
+.. code-block:: python
+
+   >>> n = int(input('Entrer un entier : '))
+   Entrer un entier : 5
+   >>> n
+   5
+   >>> n*3
+   15
 
 
-   
+Il est possible de combiner les fonctions ``int()`` et ``input()`` sur la même ligne.
 
-* Ici la fonction ``str()`` permet la **conversion** de tout type en chaine de caractères (``string``).
+.. note::
+
+   De la même manière, la fonction ``float()`` permet la conversion en type flottant.

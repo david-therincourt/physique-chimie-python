@@ -214,7 +214,7 @@ latex_elements = {
     \centering
     \vspace*{40mm} %% % * is used to give space from top
     \textbf{\Huge {Python pour la physique-chimie}}
-    \vspace{0mm}
+    \vspace{10mm}
     \begin{figure}[!h]
     \centering
     \includegraphics[scale=0.4]{Python_logo.png}

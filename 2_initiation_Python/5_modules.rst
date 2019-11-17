@@ -4,11 +4,12 @@ Les modules
 
 Le langage Python est fourni avec des fonctions de base. Mais leur nombre est bien souvent insuffisant. Il est alors souvent utile d'utiliser des fonctions écrites par d'autres personnes de la communauté Python. C'est ce qu'apportent les librairies ou modules.
 
+Importation d'un module
+=======================
+
 Par exemple, il n'est pas possible d'effectuer une racine carrée à moins d'importer la fonction ``sqrt()`` inclue dans le module ``math`` !
 
 https://docs.python.org/3/library/math.html
-
-:Exemple:
 
 .. code:: python
 
@@ -24,7 +25,6 @@ https://docs.python.org/3/library/math.html
 * La fonction racine carrée n'est accessible qu'avec la syntaxe ``math.sqrt()`` signifiant que ``sqrt()`` est une fonction du module ``math``.
 * Toutes les autres fonctions mathématiques du module ``math`` sont ainsi disponibles de cette manière.
 
-:Exemple:
 
 Si le nom du module est trop long à écrire à chaque fois !
 
@@ -38,7 +38,8 @@ Si le nom du module est trop long à écrire à chaque fois !
 
 * ``mt`` est un alias de ``math``.
 
-:Exemples: autres façons d'appeler une librairie.
+Importation d'une fonction dans un module
+=========================================
 
 .. code:: python
 
@@ -61,14 +62,15 @@ Si le nom du module est trop long à écrire à chaque fois !
 * La présence du caractère ``*`` importe toutes les fonctions du module ``math`` ;
 * Mauvaise pratique. **À éviter** ! 
 
-.. note::
+Modules pour les sciences physiques
+===================================
 
-   Quelques modules souvent rencontrés en sciences physiques : ``math``, ``numpy``, ``matplotlib``, ``scipy``, ...
+Quelques modules sont souvent rencontrés en sciences physiques tels que ``math``, ``numpy``, ``matplotlib``, ``scipy``, ...
 
-   :Exemple:
+Par exemple :
 
-   .. code:: python
-   
-      >>> import numpy as np
-      >>> import matplotlib.pyplot as plt
-      >>> from scipy.stats import linregress
+.. code:: python
+
+   >>> import numpy as np
+   >>> import matplotlib.pyplot as plt
+   >>> from scipy.stats import linregress

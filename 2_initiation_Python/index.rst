@@ -1,7 +1,11 @@
 Initiation au langage Python
 ============================
 
-Cette initiation au langage Python est réalisée sous forme d'exemples commentés dans un interpréteur Python 3 en mode interactif.
+Cette initiation au langage Python est réalisée sous **forme d'exemples commentés** dans une console Python 3 en mode interactif (à la manière d'une calculatrice).
+
+.. warning::
+
+   Les caractères ``>>>`` ne font pas partie des instructions Python. Il s'agit d'un *prompt* de la console qui signifie que Python attend une (ou des) instruction(s) à interpréter.
 
 .. toctree::
    :maxdepth: 2

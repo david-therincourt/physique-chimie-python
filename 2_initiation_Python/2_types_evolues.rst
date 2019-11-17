@@ -4,11 +4,10 @@ Les types évolués
 
 Les listes
 ----------
-En sciences physiques, l'utilisation des tableaux de données est monnaie courante. En langage Python, les tableaux peuvent-être représentés par les listes.
 
-:Exemple:
+En sciences physiques, l'utilisation des tableaux de données est monnaie courante. En langage Python, les **tableaux sont représentés par les listes**.
 
-.. code:: python
+.. code-block:: python
 
    >>> l = [0,'a',4.13]
    >>> print(l)
@@ -18,9 +17,7 @@ En sciences physiques, l'utilisation des tableaux de données est monnaie couran
 * Les éléments d'une liste sont **séparés** par des virgules ;
 * Une liste peut contenir des  **types différents**.
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> l[0]
    0
@@ -30,27 +27,36 @@ En sciences physiques, l'utilisation des tableaux de données est monnaie couran
    4.13
    >>> l[3]
    Traceback (most recent call last):
-   File "<stdin>", line 1, in <module>
+     File "<stdin>", line 1, in <module>
    IndexError: list index out of range
 
-* Les éléments d'une liste sont repérés par un **indice**.
-* En programmation, l'indice du premier élément est toujours 0 !
+* Chaque élément d'une liste est repéré par un **indice** (position dans la liste).
+* L'indice du premier élément est toujours 0 !
 
-:Exemple:
+.. code-block:: python
 
-.. code:: python
+   >>> l[-1]
+   4.13
+   >>> l[-2]
+   'a'
+   >>> l[-4]
+   Traceback (most recent call last):
+     File "<stdin>", line 1, in <module>
+   IndexError: list index out of range
+
+* Les indices négatifs permettent de parcourir la liste depuis la fin.
+* L'indice ``-1`` étant le dernier élément de la liste !
+
+.. code-block:: python
 
    >>> l[1]=3
    >>> print(l)
    [0, 3, 4.13]
 
+Les éléments d'une liste peuvent-être **modifiés**.
 
 
-* Les éléments d'une liste peuvent-être **modifiés**.
-
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> x = [0,1,2,3,4,5,6]
    >>> x[2:]
@@ -60,11 +66,9 @@ En sciences physiques, l'utilisation des tableaux de données est monnaie couran
    >>> x[2:5]
    [2, 3, 4]
 
-* Le caractère ``:`` permet de **sélectionner** une partie de la liste.
+Le caractère ``:`` permet de **sélectionner** une partie de la liste.
 
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> y = [0,1,2,6,5,4,3]
    >>> y.sort()
@@ -76,14 +80,22 @@ En sciences physiques, l'utilisation des tableaux de données est monnaie couran
 * La fonction ``sort()`` trie une liste dans l'ordre croissant.
 * La fonction ``len()`` donne le nombre d'éléments dans une liste.
 
+.. code-block:: python
+
+   >>> y = [0,1,2,6,5,4,3]
+   >>> y.append(9)
+   >>> y
+   [0, 1, 2, 6, 5, 4, 3, 9]
+
+La fonction ``append()`` ajoute un élément à la fin de la liste.
+
 Les tuples
 ----------
 
 Un tuple est un tableau **non-modifiable**.
 
-:Exemple:
 
-.. code:: python
+.. code-block:: python
 
    >>> t = (1,2,3)
    >>> t[1]
@@ -96,19 +108,17 @@ Un tuple est un tableau **non-modifiable**.
 * Un tuple est une **série de valeurs** entre parenthèses ``()`` séparées par des virgules.
 * Les éléments d'un tuple sont **non modifiables**.
 
-:Exemple:
 
-.. code:: python
+.. code-block:: python
 
-   >> t = 1,2,3
+   >>> t = 1,2,3
    >>> t
    (1, 2, 3)
 
-* Il est possible d'omettre les parenthèses !
+Il est possible d'omettre les parenthèses avec les tuples !
 
-:Exemple:
 
-.. code:: python
+.. code-block:: python
 
    >>> a,b,c = 4,"azerty",4.56
    >>> print(a)
@@ -118,4 +128,4 @@ Un tuple est un tableau **non-modifiable**.
    >>> print(c)
    4.56
 
-* En Python, les tuples permettent l'**affectation multiple** (sur une même ligne).
+En Python, les tuples permettent l'**affectation multiple** (sur une même ligne).
