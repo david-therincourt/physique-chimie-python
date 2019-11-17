@@ -4,27 +4,18 @@ Les tableaux avec Numpy
 
 Le module Numpy  permet la création et la manipulation de tableaux (vecteurs) dans Python.
 
+Site Web officiel de Numpy : https://www.numpy.org/
 
-Site Web officiel de Numpy :
+Documentation de Numpy : https://docs.scipy.org/doc/
 
-https://www.numpy.org/
+Importation du module Numpy
+===========================
 
-Documentation de  Numpy :
-
-https://docs.scipy.org/doc/
-
-
-
-Importation de Numpy
-====================
-
-:Exemple:
-
-.. code:: python
+.. code-block:: python
 
    >>> import munpy as np
 
-* Le module ``numpy`` est importé avec l'alias ``np`` plus rapide à écrire à fois !
+* Le module ``numpy`` est importé avec l'alias ``np`` qui est plus rapide à écrire à fois !
 
 
 Création de tableaux
@@ -33,9 +24,9 @@ Création de tableaux
 A partir d'une liste
 ~~~~~~~~~~~~~~~~~~~~
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.array([1,2,3,4])
    >>> a
@@ -49,9 +40,9 @@ A partir d'une liste
 A partir d'un intervalle
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.linspace(1,7,3)
    >>> a
@@ -60,9 +51,9 @@ A partir d'un intervalle
 * La fonction ``linspace(start,end, nb)`` génère ``n`` valeurs entre ``start`` et ``end``.
 
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.arange(1,2,0.2)
    >>> print(a)
@@ -73,9 +64,9 @@ A partir d'un intervalle
 Créer un tableau vide
 ~~~~~~~~~~~~~~~~~~~~~
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.zeros(5)
    >>> print(a)
@@ -85,9 +76,9 @@ Créer un tableau vide
 Manipulation de tableaux
 ========================
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.array([1,2,3,4])
    >>> a*3
@@ -97,9 +88,9 @@ Manipulation de tableaux
 
 Les opérations mathématiques se font récursivement sur les tableaux Numpy.
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> l=[1,2,3,4]
    >>> l*3
@@ -107,9 +98,9 @@ Les opérations mathématiques se font récursivement sur les tableaux Numpy.
 
 Ce n'est pas le cas avec les listes !
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.array([1,2,3,4])
    >>> b = np.array([5,6,3,8])
@@ -120,9 +111,9 @@ Ce n'est pas le cas avec les listes !
 
 La plupart des opérateurs sont disponibles avec les tableaux Numpy !
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> a = np.array([1,2,3,4])
    >>> import math
@@ -133,16 +124,16 @@ La plupart des opérateurs sont disponibles avec les tableaux Numpy !
 
 Par contre, il n'est pas possible d'appliquer les fonctions mathématiques du module ``math``.
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> np.sqrt(a)
    array([1.        , 1.41421356, 1.73205081, 2.        ])
    >>> np.exp(a)
    array([ 2.71828183,  7.3890561 , 20.08553692, 54.59815003])
 
-Mais le module Numpy possède ses propres fonctions mathématiques.
+Le module Numpy intégre ses propres fonctions mathématiques.
 
 
 
@@ -154,7 +145,7 @@ Fichier CSV
 
 La plupart des logiciels de traitement de données (ex. tableur, Regressi, Latis, ...) donne la possibilité d'importer ou d'exporter des données dans un fichier texte au format CSV avec l'extension ``.csv`` ou ``.txt``.
 
-:Exemple:
+
 
 Le tableau de données suivant :
 
@@ -167,7 +158,7 @@ Le tableau de données suivant :
    4  20 4
    == == ==
 
-s'écrit comme ci-dessous dans un fichier CSV nommé par exemple ``data.txt`` :
+s'écrit comme ci-dessous dans un fichier texte au format CSV nommé par exemple ``data.txt`` :
 
 .. code::
 
@@ -178,16 +169,16 @@ s'écrit comme ci-dessous dans un fichier CSV nommé par exemple ``data.txt`` :
    4,20,4
 
 * les données sont rangées en colonne ;
-* les valeurs sont séparées une virgule, un point virgule ou une tabulation ;
+* les valeurs sont séparées par une virgule, un point virgule ou une tabulation ;
 * la première ligne renseigne sur les noms des variables.
 
 
 Importer un fichier CSV
 =======================
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> import numpy as np
    >>> np.loadtxt('data.txt',delimiter=',',skiprows=1,)
@@ -201,9 +192,9 @@ Importer un fichier CSV
 * ``skiprows=1`` pour indiquer que la première ligne ne contient pas de données.
 * Par contre le tableau n'est pas dans le bon sens !
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> import numpy as np
    >>> np.loadtxt('data.txt',delimiter=',',skiprows=1,unpack=True)
@@ -213,9 +204,9 @@ Importer un fichier CSV
 
 L'option ``unpack=True`` transpose le tableau.
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    >>> import numpy as np
    >>> x,y,z = np.loadtxt('data.txt',delimiter=',',skiprows=1,unpack=True)
@@ -227,14 +218,14 @@ L'option ``unpack=True`` transpose le tableau.
    array([7., 6., 5., 4.])
 
 
-Une affectation multiple permet d'obtenir toutes les variables d'un coup.
+Une affectation multiple permet d'obtenir toutes les variables d'un coup (utilisation d'un tuple).
 
 Export dans un fichier CSV
 ==========================
 
-:Exemple:
 
-.. code:: python
+
+.. code-block:: python
 
    import numpy as np
    a = np.array([1,2,3,4])

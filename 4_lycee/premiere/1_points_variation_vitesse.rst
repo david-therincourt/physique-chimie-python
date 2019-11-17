@@ -8,7 +8,7 @@ Mouvement d'un point : vecteur variation vitesse
 
 :Script Python:
 
-.. code:: python
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt

@@ -4,9 +4,7 @@ Les graphiques avec Matplotlib
 
 Matplotlib est une librairie Python pour la visualisation de courbes.
 
-Site Web officiel de Matplotlib :
-
-https://matplotlib.org/
+Site Web officiel de Matplotlib : https://matplotlib.org/
 
 Référence de l'API de la collection *pyplot* de la librairie  *matplotlib* :
 
@@ -21,9 +19,9 @@ Les bases
 ~~~~~~~~~
 
 
-:Code Python:
 
-.. code:: python
+
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -37,7 +35,7 @@ Les bases
 .. image:: images/Matplotlib_Courbe_1.png
    :width: 515 px
    :height: 349 px
-   :scale: 100 %
+   :scale: 70 %
    :alt: alternate text
    :align: center
 
@@ -49,9 +47,9 @@ Les bases
 Ajouter un titre, une légende, une grille
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:Code Python:
 
-.. code:: python
+
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -71,7 +69,7 @@ Ajouter un titre, une légende, une grille
 .. image:: images/Matplotlib_Courbe_2.png
    :width: 515 px
    :height: 349 px
-   :scale: 100 %
+   :scale: 70 %
    :alt: alternate text
    :align: center
 
@@ -82,9 +80,9 @@ Ajouter un titre, une légende, une grille
 Définir l'échelle
 ~~~~~~~~~~~~~~~~~
 
-:Code Python:
 
-.. code:: python
+
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -106,16 +104,14 @@ Définir l'échelle
 .. image:: images/Matplotlib_Courbe_3.png
    :width: 515 px
    :height: 349 px
-   :scale: 100 %
+   :scale: 70 %
    :alt: alternate text
    :align: center
 
 Tracer une courbe à partir d'une fonction
 =========================================
 
-:Code Python:
-
-.. code:: python
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -133,13 +129,13 @@ Tracer une courbe à partir d'une fonction
 .. image:: images/Matplotlib_Courbe_10.png
    :width: 515 px
    :height: 349 px
-   :scale: 100 %
+   :scale: 70 %
    :alt: alternate text
    :align: center
 
-:Code Python:
 
-.. code:: python
+
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -160,10 +156,10 @@ Tracer une courbe à partir d'une fonction
 .. image:: images/Matplotlib_Courbe_11.png
    :width: 515 px
    :height: 349 px
-   :scale: 100 %
+   :scale: 70 %
    :alt: alternate text
    :align: center
 
 
 
-* Dans la fonction ``plot()``, le paramètre ``label='...'`` permet d'ajouter une étiquette dans la légende.
+Dans la fonction ``plot()``, le paramètre ``label='...'`` permet d'ajouter une étiquette dans la légende.

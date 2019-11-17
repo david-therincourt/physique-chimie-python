@@ -6,9 +6,10 @@
 
    "Déterminer la composition de l’état final d’un système siège d’une transformation chimique totale à l’aide d’un langage de programmation.
 
-:Script Python:
+Cas 1
+=====
 
-.. code:: python
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
@@ -64,3 +65,48 @@
    :scale: 100 %
    :alt: alternate text
    :align: center
+
+.. code-block:: python
+
+
+
+Cas 2
+=====
+
+On considère la réaction totale entre l’hydrogène sulfureux (H 2 S) et le dioxyde de soufre (SO 2 ) qui produit du
+soufre et de l’eau et modélisée par l’équation :
+
+.. math::
+
+   2 H_2S + SO_2 -> 3 S + 2 H_2O
+
+.. code-block:: python
+
+   a = 2 # coefficient stoechiométrique de H2S
+   b = 1
+   c = 3
+   d = 2
+
+   n0_H2S = float(input("Donne le nombre de moles de H2S : "))
+   n0_SO2 = float(input("Donne le nombre de moles de SO2 : "))
+   n0_S   = float(input("Donne le nombre de moles de S : "))
+   n0_H2O = float(input("Donne le nombre de moles de H2O : "))
+
+   n_H2S, n_SO2, n_S, n_H2O = n0_H2S, n0_SO2, n0_S, n0_H2O
+
+   dx = 0.01
+   x = 0
+
+   while n_H2S>0 and n_SO2>0:
+       x = x + dx
+       n_H2S = n0_H2S - a*x
+       n_SO2 = n0_SO2 - b*x
+       n_S   = n0_S   - c*x
+       n_H2O = n0_H2O - d*x
+
+
+   print('Avancement final = ',x, ' mol')
+   print('n(H2S) = ', n_H2S)
+   print('n(SO2) = ', n_SO2)
+   print('n(S) = ', n_S)
+   print('n(H2O) = ', n_H2O)
