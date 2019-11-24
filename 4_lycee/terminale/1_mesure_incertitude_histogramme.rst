@@ -139,7 +139,7 @@ Le fichier CSV obtenu pour 100 mesures est téléchargeable ici :download:`data_
 
 Voici un extrait du fichier CSV des 30 premières mesures :
 
-.. code-block:: csv
+.. code-block:: text
 
    n;duree;v
    1;9853;352.18
