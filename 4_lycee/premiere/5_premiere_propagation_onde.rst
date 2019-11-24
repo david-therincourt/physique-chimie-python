@@ -6,7 +6,8 @@ Simuler la propagation d'une onde
 
    "Simuler à l’aide d’un langage de programmation, la propagation d’une onde périodique".
 
-:Script Python:
+Programme Python
+================
 
 .. code:: python
 

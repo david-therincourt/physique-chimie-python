@@ -6,13 +6,14 @@ Caractéristique d'un dipôle
 
    "représenter un nuage de points associé à la caractéristique d’un dipôle et modéliser la caractéristique de ce dipôle à l’aide d’un langage de programmation".
 
+Caractéristique d'une CTN
+=========================
+
 Cas d'un capteur de température NTC 10K type EKS 221.
 
 http://files.danfoss.com/technicalinfo/dila/01/RD8KC304_EKS221.pdf
 
-:Script Python:
-
-.. code:: python
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt

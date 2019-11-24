@@ -9,6 +9,8 @@ Documentation de  Scipy : https://docs.scipy.org/doc/
 Interpolation
 =============
 
+La fonction ``scipy.interpolate.interp1d()`` retourne un fonction à une dimension interpolée à partir d'une série de points.
+
 .. code-block:: python
 
    import numpy as np
@@ -18,14 +20,15 @@ Interpolation
    x=np.array([0,1,2,3,4,5,6,7,8,9])
    y=np.array([1.,0.720,0.511,0.371,0.260,0.190,0.133,0.099,0.069,0.048])
    
+   # Interpolation
+   f = interpolate.interp1d(x, y, kind='cubic')  # ou kind = 'linear'
    
-   f = interpolate.interp1d(x, y, kind='cubic')
+   xnew = np.linspace(0,9,50)   # Nouvelle abscisse pour f(x)
+   ynew = f(xnew)               # Calcul des ordonnées de f(x)
    
-   xnew = np.linspace(0,9,50)
-   ynew = f(xnew)   # use interpolation function returned by `interp1d`
-   plt.plot(xnew, ynew, '-')
-   plt.plot(x, y, 'x')
-   plt.show()
+   plt.plot(xnew, ynew, '-')    # Tracé de la fonction
+   plt.plot(x, y, 'x')          # Tracé des points
+   plt.show()                   # Affichage
 
 .. image:: images/Scipy_Courbe_10.png
    :width: 515 px
@@ -34,10 +37,12 @@ Interpolation
    :alt: alternate text
    :align: center
 
+
+
 Régression linéaire
 ===================
 
-
+La fonction ``scipy.stats.linregress()`` retourne les paramètres de la régression linéaire d'une série de points.
 
 .. code-block:: python
 
@@ -48,21 +53,22 @@ Régression linéaire
    x = np.array([0,1.01,2.02,2.99,3.98])
    y = np.array([10.02,7.96,6.03,4.04,2.01])
    
-   # Regression linéaire
-   a,b,rho,_,_ = linregress(x,y)
-   print("b = ",b)
-   print("rho = ",rho)
    
-   xnew = np.linspace(0,4,50)
-   ynew = a*xnew+b
+   a,b,rho,_,_ = linregress(x,y)    # Régression linéaire
+   print("a = ",a)                  # Affichage de coefficient directeur
+   print("b = ",b)                  # Affichage de l'ordonnée à l'origine
+   print("rho = ",rho)              # Affichage du coefficient de corrélation
    
-   plt.plot(xnew,ynew,'-',x,y,'x')
-   plt.title('Régression linéaire')
-   plt.xlabel('x')
-   plt.xlim(-1,5)
-   plt.ylabel('y')
-   plt.ylim(0,12)
-   plt.show()
+   xnew = np.linspace(0,4,50)       # Nouvelle abscisse
+   ynew = a*xnew+b                  # Ordonnées de la fonction affine
+
+   plt.plot(xnew,ynew,'-',x,y,'x')  # Tracé des points et de la fonction affine
+   plt.title('Régression linéaire') # Titre
+   plt.xlabel('x')                  # Etiquette en abscisse
+   plt.xlim(-1,5)                   # Echelle en abscisse
+   plt.ylabel('y')                  # Etiquette en ordonnée
+   plt.ylim(0,12)                   # Echelle en ordonnée
+   plt.show()                       # Affichage
 
 :Résultats:
 
@@ -113,8 +119,8 @@ Cas d'une trajectoire parabolique de la forme :
 
    plt.plot(X,Y,'b+', label = 'trajectoire')      # Courbe des mesures
    plt.plot(X, Y_modele, 'r-', label = "modèle")  # Courbe du modèle
-   plt.xlabel("x")
-   plt.ylabel("y")
+   plt.xlabel("x")                                # Etiquette en abscisse
+   plt.ylabel("y")                                # Etiquette en ordonnée
    plt.title("Trajectoire et modèle associé")     # Titre
    plt.legend()                                   # Affichage légend
    plt.show()                                     # Affichage fenêtre
@@ -122,7 +128,7 @@ Cas d'une trajectoire parabolique de la forme :
 Modélisation à partir d'une fonction quelconque
 ===============================================
 
-
+La fonction ``scipy.optimize.curve_fit()`` retourne les paramètres de modélisation à partir d'une fonction quelconque.
 
 .. code-block:: python
 
@@ -134,12 +140,12 @@ Modélisation à partir d'une fonction quelconque
    y=np.array([0.,3.935,6.321,7.769,8.647,9.179,9.502,9.698,9.817,9.889])
    
    
-   def fct(x,A,tau):
-       return A*(1-np.exp(-x/tau))
+   def fct(x,A,tau):                  # Définition de la fonction
+       return A*(1-np.exp(-x/tau))    # Expression du modèle
    
-   (A,tau), pcov = curve_fit(fct,x,y)
-   print("A= ",A)
-   print("tau=",tau)
+   (A,tau), pcov = curve_fit(fct,x,y) # Détermination des paramètres du modèle
+   print("A= ",A)                     # Affichage de A
+   print("tau=",tau)                  # Affichage de tau
    
    xnew = np.linspace(0,10,50)
    ynew = fct(xnew,A,tau)

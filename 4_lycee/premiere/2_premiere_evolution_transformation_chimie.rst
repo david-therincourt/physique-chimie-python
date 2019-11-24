@@ -6,8 +6,8 @@
 
    "Déterminer la composition de l’état final d’un système siège d’une transformation chimique totale à l’aide d’un langage de programmation.
 
-Cas 1
-=====
+Méthode algébrique
+==================
 
 .. code-block:: python
 
@@ -66,12 +66,11 @@ Cas 1
    :alt: alternate text
    :align: center
 
-.. code-block:: python
 
 
 
-Cas 2
-=====
+Méthode itérative
+=================
 
 On considère la réaction totale entre l’hydrogène sulfureux (H 2 S) et le dioxyde de soufre (SO 2 ) qui produit du
 soufre et de l’eau et modélisée par l’équation :
@@ -79,6 +78,9 @@ soufre et de l’eau et modélisée par l’équation :
 .. math::
 
    2 H_2S + SO_2 -> 3 S + 2 H_2O
+
+Etape 1 : sans courbe
+---------------------
 
 .. code-block:: python
 
@@ -101,8 +103,8 @@ soufre et de l’eau et modélisée par l’équation :
        x = x + dx
        n_H2S = n0_H2S - a*x
        n_SO2 = n0_SO2 - b*x
-       n_S   = n0_S   - c*x
-       n_H2O = n0_H2O - d*x
+       n_S   = n0_S   + c*x
+       n_H2O = n0_H2O + d*x
 
 
    print('Avancement final = ',x, ' mol')
@@ -110,3 +112,64 @@ soufre et de l’eau et modélisée par l’équation :
    print('n(SO2) = ', n_SO2)
    print('n(S) = ', n_S)
    print('n(H2O) = ', n_H2O)
+
+Etape 2 : avec courbe
+---------------------
+
+.. code-block:: python
+
+   import matplotlib.pyplot as plt
+
+   a = 2 # coefficient stoechiométrique de H2S
+   b = 1
+   c = 3
+   d = 2
+
+   n0_H2S = float(input("Donne le nombre de moles de H2S : "))
+   n0_SO2 = float(input("Donne le nombre de moles de SO2 : "))
+   n0_S   = float(input("Donne le nombre de moles de S : "))
+   n0_H2O = float(input("Donne le nombre de moles de H2O : "))
+
+   n_H2S, n_SO2, n_S, n_H2O = [n0_H2S], [n0_SO2], [n0_S], [n0_H2O]
+
+   dx = 0.1
+   x = [0]
+
+   while n_H2S[-1]>0 and n_SO2[-1]>0:
+       x.append(x[-1] + dx)
+       n_H2S.append(n_H2S[-1] - a*dx)
+       n_SO2.append(n_SO2[-1] - b*dx)
+       n_S.append(n_S[-1]   + c*dx)
+       n_H2O.append(n_H2O[-1] + d*dx)
+
+   xMax = max(x)
+
+   plt.title("Evolution d'une réaction chimique")
+   plt.xlabel("Avancement x (mol)")
+   plt.xlim(0,xMax)
+   plt.ylabel("Quantité de matière (mol)")
+   plt.ylim(0,2)
+   plt.plot(x,n_H2S,label = "Réactif H2S")
+   plt.plot(x,n_SO2,label = "Réactif SO2")
+   plt.plot(x,n_S,label = "Produit S")
+   plt.plot(x,n_H2O,label = "Produit H2O")
+   plt.legend()
+   plt.grid()
+   plt.show()
+
+:résultats:
+
+.. code-block:: python
+
+   Donne le nombre de moles de H2S : 1
+   Donne le nombre de moles de SO2 : 1
+   Donne le nombre de moles de S : 0
+   Donne le nombre de moles de H2O : 0
+   xMax=  0.5000000000000002
+
+.. image:: images/Chimie_Evolution_Systeme_2.png
+   :width: 556 px
+   :height: 386 px
+   :scale: 100 %
+   :alt: alternate text
+   :align: center

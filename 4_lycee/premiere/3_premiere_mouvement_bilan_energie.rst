@@ -6,13 +6,15 @@ Bilan énergétique d'un mouvement rectiligne
 
    "Utiliser un langage de programmation pour effectuer le bilan énergétique d’un système en mouvement".
 
-.. topic:: Problème
+Principe
+========
 
-   Étude d'un saut à l'élastique à partir d'une ressource EDUSCOL.
-   http://cache.media.education.gouv.fr/file/Programmer_en_physique-chimie/12/5/RA18_Lycee_PHCH_etude-energetique-mouvement-rectiligne_1044125.pdf
+Étude d'un saut à l'élastique à partir d'une ressource EDUSCOL.
+
+http://cache.media.education.gouv.fr/file/Programmer_en_physique-chimie/12/5/RA18_Lycee_PHCH_etude-energetique-mouvement-rectiligne_1044125.pdf
 
 Avant que l'élastique soit tendu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================
 
 :Script Python:
 
@@ -51,7 +53,7 @@ Avant que l'élastique soit tendu
    :align: center
 
 Chute complète
-~~~~~~~~~~~~~~
+==============
 
 :Script Python:
 
@@ -97,13 +99,13 @@ Chute complète
    :align: center
 
 Chute complète avec calcul de longueur maximale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===============================================
 
 
 :Script Python:
 
 .. code:: python
 
-   ...
+   Bientôt !
 
 :Résultats:

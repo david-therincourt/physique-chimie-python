@@ -18,19 +18,16 @@ Tracer une courbe à partir de données
 Les bases
 ~~~~~~~~~
 
-
-
-
 .. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
    
-   x = np.array([0,1.01,2.02,2.99,3.98])
-   y = np.array([10.02,7.96,6.03,4.04,2.01])
+   x = np.array([0,1.01,2.02,2.99,3.98])     # Données en abscisse
+   y = np.array([10.02,7.96,6.03,4.04,2.01]) # Données en ordonnée
 
-   plt.plot(x,y)
-   plt.show()
+   plt.plot(x,y)       # Tracé de la courbe
+   plt.show()          # Affichage de la courbe
    
 .. image:: images/Matplotlib_Courbe_1.png
    :width: 515 px
@@ -54,15 +51,15 @@ Ajouter un titre, une légende, une grille
    import numpy as np
    import matplotlib.pyplot as plt
    
-   x = np.array([0,1.01,2.02,2.99,3.98])
-   y = np.array([10.02,7.96,6.03,4.04,2.01])
+   x = np.array([0,1.01,2.02,2.99,3.98])     # Données en abscisse
+   y = np.array([10.02,7.96,6.03,4.04,2.01]) # Données en ordonnée
    
-   plt.plot(x,y,'x')
-   plt.title('Mom titre')
-   plt.xlabel('x')
-   plt.ylabel('y')
-   plt.grid()
-   plt.show()
+   plt.plot(x,y,'x')       # Tracé de la courbe
+   plt.title('Mom titre')  # Ajout d'un titre
+   plt.xlabel('x')         # Nom de la grandeur en abscisse
+   plt.ylabel('y')         # Nom de la grandeur en ordonnée
+   plt.grid()              # Ajout d'une grille
+   plt.show()              # Affichage
 
 
 
@@ -88,18 +85,18 @@ Définir l'échelle
    import matplotlib.pyplot as plt
    
    
-   x = np.array([0,1.01,2.02,2.99,3.98])
-   y = np.array([10.02,7.96,6.03,4.04,2.01])
+   x = np.array([0,1.01,2.02,2.99,3.98])     # Données en abscisse
+   y = np.array([10.02,7.96,6.03,4.04,2.01]) # Données en ordonnée
    
    
-   plt.plot(x,y,'x')
-   plt.title('Mon titre')
-   plt.xlabel('x')
-   plt.xlim(0,4)    # Echelle sur l'axe des x
-   plt.ylabel('y')
-   plt.ylim(0,11)   # Echelle sur l'axe des y
-   plt.grid()
-   plt.show()
+   plt.plot(x,y,'x')       # Tracé de la courbe
+   plt.title('Mon titre')  # Ajout d'un titre
+   plt.xlabel('x')         # Nom de la grandeur en abscisse
+   plt.xlim(0,4)           # Echelle sur l'axe des x
+   plt.ylabel('y')         # Nom de la grandeur en ordonnée
+   plt.ylim(0,11)          # Echelle sur l'axe des y
+   plt.grid()              # Ajout d'une grille
+   plt.show()              # Affichage
 
 .. image:: images/Matplotlib_Courbe_3.png
    :width: 515 px
@@ -116,15 +113,15 @@ Tracer une courbe à partir d'une fonction
    import numpy as np
    import matplotlib.pyplot as plt
    
-   x = np.linspace(0,10,100)
-   y = 10*np.sin(x)
+   x = np.linspace(0,10,100)   # Création d'un tableau de valeurs pour x
+   y = 10*np.sin(x)            # Calcul de y à partir de la fonction mathématique
    
-   plt.plot(x,y)
-   plt.title("A partir d'une fonction")
-   plt.xlabel('x')
-   plt.ylabel('y')
-   plt.grid()
-   plt.show()
+   plt.plot(x,y)                        # Tracé de la courbe
+   plt.title("A partir d'une fonction") # Titre
+   plt.xlabel('x')                      # Légende abscisse
+   plt.ylabel('y')                      # Légende ordonnée
+   plt.grid()                           # Ajout d'une grille
+   plt.show()                           # Affichage
 
 .. image:: images/Matplotlib_Courbe_10.png
    :width: 515 px
@@ -140,18 +137,18 @@ Tracer une courbe à partir d'une fonction
    import numpy as np
    import matplotlib.pyplot as plt
    
-   x = np.linspace(1,10,100)
-   y1 = 10*np.sin(x)
-   y2 =  6*np.sin(x-1)
+   x = np.linspace(1,10,100)   # Création d'un tableau de valeurs pour x
+   y1 = 10*np.sin(x)           # Calcul de y1
+   y2 =  6*np.sin(x-1)         # Calcul de y2
    
-   plt.plot(x,y1,label='10.sin(x)')
-   plt.plot(x,y2,label='6.sin(x-1)')
-   plt.title('Ma première courbe')
-   plt.xlabel('x')
-   plt.ylabel('y')
-   plt.legend()
-   plt.grid()
-   plt.show()
+   plt.plot(x,y1,label='10.sin(x)')   # Tracé de la courbe y1 avec texte légende
+   plt.plot(x,y2,label='6.sin(x-1)')  # Tracé de la courbe y1 avec texte légende
+   plt.title('Ma première courbe')    # Titre
+   plt.xlabel('x')                    # Légende abscisse
+   plt.ylabel('y')                    # Légende ordonnée
+   plt.legend()                       # Ajout de la légende
+   plt.grid()                         # Ajout d'une grille
+   plt.show()                         # Affichage
 
 .. image:: images/Matplotlib_Courbe_11.png
    :width: 515 px
@@ -159,7 +156,5 @@ Tracer une courbe à partir d'une fonction
    :scale: 70 %
    :alt: alternate text
    :align: center
-
-
 
 Dans la fonction ``plot()``, le paramètre ``label='...'`` permet d'ajouter une étiquette dans la légende.

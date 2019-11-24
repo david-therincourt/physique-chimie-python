@@ -1,6 +1,6 @@
-================================
-Histogramme d'un série de mesure
-================================
+=================================
+Histogramme d'une série de mesure
+=================================
 
 .. topic:: Programme de classe terminale, enseignement de spécialité, voie générale
 
@@ -39,7 +39,7 @@ Les options de la fonction ``hist()`` :
 
 * ``range(0,10)`` fixe les limites de la plage d'étude du tableau de données.
 * ``bins=10`` est le nombre d'intervalles dans la plage d'étude.
-* ``rwidth = 0.95`` fixe la largeur des barres à 95%.
+* ``rwidth = 0.95`` fixe la largeur des barres à 95% pour une meilleure visibilité.
 
 Exemple 2
 ---------
@@ -92,7 +92,7 @@ A l'aide d'un émetteur-récepteur ultrasons du type HC-SR04, un microcontrôleu
 Expérimentation
 ---------------
 
-Le programme Arduino utilisé pour obtenir dans le moniteur série du logiciel Arduino les mesures au format CSV est donné ci-dessous.
+Le programme Arduino utilisé pour obtenir, dans le moniteur série du logiciel Arduino, les mesures au format CSV est donné ci-dessous.
 
 .. code-block:: arduino
 

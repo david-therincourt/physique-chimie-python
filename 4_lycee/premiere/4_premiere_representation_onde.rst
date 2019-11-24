@@ -6,10 +6,11 @@ Représentation d'une onde
 
    "Représenter un signal périodique et illustrer l’influence de ses caractéristiques (période, amplitude) sur sa représentation".
 
-:Script Python:
+Programme Python
+================
 
 .. code:: python
 
-   ???
+   Bientôt
 
 :Résultats:

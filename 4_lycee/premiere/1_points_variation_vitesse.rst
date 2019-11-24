@@ -6,7 +6,8 @@ Mouvement d'un point : vecteur variation vitesse
 
    "Utiliser un langage de programmation pour étudier la relation approchée entre la variation du vecteur vitesse d’un système modélisé par un point matériel entre deux instants voisins et la somme des forces appliquées sur celui-ci".
 
-:Script Python:
+Programme Python
+================
 
 .. code-block:: python
 

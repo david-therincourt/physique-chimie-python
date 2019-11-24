@@ -101,9 +101,19 @@ Il est également possible de programmer en Python dans un navigateur Web.
 
    https://www.onlinegdb.com/online_python_compiler
 
+
+.. figure:: images/console_web_python_le_livre_scolaire.png
+   :width: 1009 px
+   :height: 408 px
+   :scale:  40 %
+   :alt: alternate text
+   :align: center
+
+   https://www.lelivrescolaire.fr/console-python
+
 .. warning::
 
-   Certaines fonctionnalités comme l'édition de courbes ne sont disponibles !
+   Certaines fonctionnalités evoluées ne sont disponibles !
 
 Premier pas avec Python
 =======================

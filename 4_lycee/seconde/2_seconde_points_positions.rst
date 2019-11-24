@@ -6,13 +6,16 @@ Mouvement d'un point : positions
    "Représenter les positions successives d’un système modélisé par un point lors
    d’une évolution unidimensionnelle ou bidimensionnelle à l’aide d’un langage de programmation".
 
+Principe
+========
+
 Les données sont obtenues à partir de l'exploitation d'une chronophotographie du lancer d'un ballon.
 
 
-:Script Python:
+Programme Python
+================
 
-
-.. code:: python
+.. code-block:: python
 
    import numpy as np
    import matplotlib.pyplot as plt
