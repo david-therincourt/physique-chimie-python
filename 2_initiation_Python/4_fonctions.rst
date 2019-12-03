@@ -40,11 +40,11 @@ Dans un script Python :
    def Epp(m,h):
        return m*9.81*h
 
-   def Ecc(m,v):
+   def Ec(m,v):
        return 0.5*m*v**2
 
    def Em(m,h,v):
-       return Epp(m,h)+Ecc(m,v)
+       return Epp(m,h)+Ec(m,v)
 
 Résultats dans la console Python :
 
@@ -52,7 +52,7 @@ Résultats dans la console Python :
 
    >>> Epp(50,10)
    4905.0
-   >>> Ecc(50,13)
+   >>> Ec(50,13)
    4225.0
    >>> Em(50,10,13)
    9130.0
