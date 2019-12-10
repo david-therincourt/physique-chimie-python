@@ -30,13 +30,13 @@ Affichage d'une variable
    >>> print(nom, a, "Bonjour")
    Newton 3 Bonjour
 
-* La fonction ``print()`` affiche le contenu d'une variable.
+* La fonction ``print()`` affiche le contenu d'une ou plusieurs variables.
 
 
 Les types d'une variable
 ------------------------
 
-Contrairement à d'autres langage de programmation comme C/C++ (ex. Arduino), il n'est **pas nécessaire de préciser le type d'une variable** lors de sa déclaration en Python.
+Contrairement à d'autres langage de programmation comme C/C++ (ex. Arduino), il n'est **pas nécessaire de préciser le type d'une variable** lors de sa déclaration en Python. Le typage des variables est **dynamique**.
 
 Les entiers
 ~~~~~~~~~~~
@@ -51,6 +51,7 @@ Les entiers
 
 * La fonction ``type()`` donne le type d'une expression ou d'une variable.
 * Le mot clé ``int`` pour `integer` signifie que la variable contient un entier.
+
 
 .. code-block:: python
 
@@ -80,6 +81,13 @@ Les entiers
    ``**`` Élever à la puissance
    ====== ===============================
 
+.. code-block:: python
+
+   >>> 2**100
+   1267650600228229401496703205376
+
+* En Python, la **taille d'un entier n'a pas de limite** !
+
 Les flottants
 ~~~~~~~~~~~~~
 
@@ -90,7 +98,7 @@ Un flottant est un **nombre à virgule** (nombre décimal).
    >>> type(9.80665)
    <class 'float'>
 
-Le type ``float`` pour les nombres à virgule flottante.
+* Le type ``float`` pour les nombres à virgule flottante.
 
 .. code-block:: python
 
@@ -102,7 +110,7 @@ Le type ``float`` pour les nombres à virgule flottante.
    >>> print(P)
    245.16625
 
-La fonction ``round(x,n)`` arrondie la valeur flottante ``x`` à ``n`` chiffres après le virgule.
+* La fonction ``round(x,n)`` arrondie la valeur flottante ``x`` à ``n`` chiffres après le virgule.
 
 Les booléens
 ~~~~~~~~~~~~
@@ -116,7 +124,7 @@ Un booléen est un type de variable logique à deux états : vrai ou faux.
    >>> type(False)
    <class 'bool'>
 
-Un booléen prend les valeurs ``True`` (vrai) ou ``False`` (faux).
+* Un booléen prend les valeurs ``True`` (vrai) ou ``False`` (faux).
 
 .. code-block:: python
 
@@ -127,7 +135,7 @@ Un booléen prend les valeurs ``True`` (vrai) ou ``False`` (faux).
    >>> 3 == 2
    False
 
-Les opérateurs de comparaison renvoient un booléen (``True`` ou ``False``)
+* Les opérateurs de comparaison renvoient toujours un booléen (``True`` ou ``False``)
 
    ====== =====================
    Opérateurs de comparaison en Python
@@ -149,7 +157,7 @@ Les opérateurs de comparaison renvoient un booléen (``True`` ou ``False``)
    >>> not False
    True
 
-Les mots clés ``and`` et ``not`` sont des opérateurs logiques.
+* Les mots clés ``and`` et ``not`` sont des opérateurs logiques.
 
    =======  ===================
    Opérateurs logiques en Python
@@ -184,7 +192,7 @@ Une chaine de caractères est un **ensemble de caractères**.
    >>> print(ch3)
    Bonjour Paul
 
-L'opérateur ``+`` réalise la **concaténation** de chaines de caractères.
+* L'opérateur ``+`` réalise la **concaténation** de chaines de caractères.
 
 .. code-block:: python
 
@@ -226,7 +234,7 @@ En python, il est possible de demander à l'utilisateur du programme de saisir u
    >>> rep
    'Bonjour'
 
-* La fonction ``input()`` renvoie la chaine de caractères saisie au clavier par l'utilisateur.
+* La fonction ``input()`` **renvoie la chaine de caractères saisie au clavier** par l'utilisateur.
 * Le chaine de caractère est affectée à la variable ``rep``.
 
 .. code-block:: python
@@ -236,7 +244,7 @@ En python, il est possible de demander à l'utilisateur du programme de saisir u
    >>> mon
    'David'
 
-Il est possible d'ajouter un texte lors de la saisie par l'utilisateur.
+* Il est possible d'ajouter un texte lors de la saisie par l'utilisateur.
 
 .. code-block:: python
 
@@ -247,7 +255,7 @@ Il est possible d'ajouter un texte lors de la saisie par l'utilisateur.
    >>> n*3
    '555'
 
-Attention, la fonction ``input()`` en **renvoie qu'une chaine de caractères** !
+* Attention, la fonction ``input()`` en **renvoie qu'une chaine de caractères** !
 
 .. code-block:: python
 
@@ -261,7 +269,7 @@ Attention, la fonction ``input()`` en **renvoie qu'une chaine de caractères** !
    >>> n*3
    15
 
-La fonction ``int()`` convertit nombre entier sous la forme d'une chaine de caractères en type entier.
+* La fonction ``int()`` convertit une chaine de caractères décrivant un entier en un type entier.
 
 .. code-block:: python
 
@@ -273,7 +281,7 @@ La fonction ``int()`` convertit nombre entier sous la forme d'une chaine de cara
    15
 
 
-Il est possible de combiner les fonctions ``int()`` et ``input()`` sur la même ligne.
+* Il est possible de combiner les fonctions ``int()`` et ``input()`` sur la même ligne.
 
 .. note::
 

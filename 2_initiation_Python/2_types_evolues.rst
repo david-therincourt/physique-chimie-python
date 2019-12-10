@@ -53,7 +53,7 @@ En sciences physiques, l'utilisation des tableaux de données est monnaie couran
    >>> print(l)
    [0, 3, 4.13]
 
-Les éléments d'une liste peuvent-être **modifiés**.
+* Les éléments d'une liste peuvent-être **modifiés**.
 
 
 .. code-block:: python
@@ -66,18 +66,14 @@ Les éléments d'une liste peuvent-être **modifiés**.
    >>> x[2:5]
    [2, 3, 4]
 
-Le caractère ``:`` permet de **sélectionner** une partie de la liste.
+* Le caractère ``:`` permet de **sélectionner** une partie de la liste.
 
 .. code-block:: python
 
    >>> y = [0,1,2,6,5,4,3]
-   >>> y.sort()
-   >>> print(y)
-   [0, 1, 2, 3, 4, 5, 6]
    >>> len(y)
    7
 
-* La fonction ``sort()`` trie une liste dans l'ordre croissant.
 * La fonction ``len()`` donne le nombre d'éléments dans une liste.
 
 .. code-block:: python
@@ -86,8 +82,13 @@ Le caractère ``:`` permet de **sélectionner** une partie de la liste.
    >>> y.append(9)
    >>> y
    [0, 1, 2, 6, 5, 4, 3, 9]
+   >>> y.sort()
+   >>> print(y)
+   [0, 1, 2, 3, 4, 5, 6, 9]
 
-La fonction ``append()`` ajoute un élément à la fin de la liste.
+* La méthode ``append()`` ajoute un élément à la fin de la liste.
+* La méthode ``sort()`` trie une liste dans l'ordre croissant.
+* Application de ces deux méthodes modifient la liste sur laquelle elles sont appliquées !
 
 Les tuples
 ----------
@@ -115,7 +116,7 @@ Un tuple est un tableau **non-modifiable**.
    >>> t
    (1, 2, 3)
 
-Il est possible d'omettre les parenthèses avec les tuples !
+* Il est possible d'omettre les parenthèses (quand c'est possible) avec les tuples !
 
 
 .. code-block:: python
@@ -128,4 +129,4 @@ Il est possible d'omettre les parenthèses avec les tuples !
    >>> print(c)
    4.56
 
-En Python, les tuples permettent l'**affectation multiple** (sur une même ligne).
+* En Python, les **tuples permettent l'affectation multiple** (sur une même ligne).

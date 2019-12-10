@@ -9,7 +9,7 @@ Documentation de  Scipy : https://docs.scipy.org/doc/
 Interpolation
 =============
 
-La fonction ``scipy.interpolate.interp1d()`` retourne un fonction à une dimension interpolée à partir d'une série de points.
+La fonction ``scipy.interpolate.interp1d()`` retourne une fonction à une dimension interpolée à partir d'une série de points.
 
 .. code-block:: python
 
@@ -124,6 +124,21 @@ Cas d'une trajectoire parabolique de la forme :
    plt.title("Trajectoire et modèle associé")     # Titre
    plt.legend()                                   # Affichage légend
    plt.show()                                     # Affichage fenêtre
+
+:Résultats:
+
+.. code-block:: python
+
+   a =  -1.028916427645116
+   b =  -0.47659343034449314
+   c =  0.4413962087861902
+
+.. image:: images/Scipy_Courbe_40.png
+   :width: 640 px
+   :height: 480 px
+   :scale: 70 %
+   :alt: alternate text
+   :align: center
 
 Modélisation à partir d'une fonction quelconque
 ===============================================

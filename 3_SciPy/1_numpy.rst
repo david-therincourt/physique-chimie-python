@@ -13,7 +13,7 @@ Importation du module Numpy
 
 .. code-block:: python
 
-   >>> import munpy as np
+   >>> import numpy as np
 
 * Le module ``numpy`` est importé avec l'alias ``np`` qui est plus rapide à écrire à fois !
 
@@ -37,9 +37,8 @@ A partir d'une liste
 * Il est possible de créer un tableau (ici à 1 dimension) à partir d'une liste.
 
 
-A partir d'un intervalle
-~~~~~~~~~~~~~~~~~~~~~~~~
-
+A partir d'un intervalle et du nombre de d'éléments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. code-block:: python
@@ -51,7 +50,8 @@ A partir d'un intervalle
 * La fonction ``linspace(start,end, nb)`` génère ``n`` valeurs entre ``start`` et ``end``.
 
 
-
+A partir d'un intervalle et d'un pas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -59,12 +59,12 @@ A partir d'un intervalle
    >>> print(a)
    [1.  1.2 1.4 1.6 1.8]
 
-* Une autre façon de faire avec la fonction ``arange()``.
+* La fonction ``arange(a,b,p)`` construit un tableau Numpy de ``a`` à ``b`` (non compris) avec un pas de ``p``.
 
 Créer un tableau vide
 ~~~~~~~~~~~~~~~~~~~~~
 
-
+Il est parfois utile de créer un tableau vide (rempli de zéros) dont les valeurs pourront être modifiées par la suite.
 
 .. code-block:: python
 
@@ -86,7 +86,7 @@ Manipulation de tableaux
    >>> a**2
    array([ 1,  4,  9, 16])
 
-Les opérations mathématiques se font récursivement sur les tableaux Numpy.
+* Les opérations mathématiques se font **itérativement** sur les tableaux de type Numpy.
 
 
 
@@ -96,7 +96,7 @@ Les opérations mathématiques se font récursivement sur les tableaux Numpy.
    >>> l*3
    [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
 
-Ce n'est pas le cas avec les listes !
+* Ce n'est pas le cas avec les listes !
 
 
 
@@ -109,7 +109,7 @@ Ce n'est pas le cas avec les listes !
    >>> a==b
    array([False, False,  True, False])
 
-La plupart des opérateurs sont disponibles avec les tableaux Numpy !
+* La plupart des opérateurs sont disponibles avec les tableaux Numpy !
 
 
 
@@ -122,7 +122,7 @@ La plupart des opérateurs sont disponibles avec les tableaux Numpy !
      File "<stdin>", line 1, in <module>
    TypeError: only size-1 arrays can be converted to Python scalars
 
-Par contre, il n'est pas possible d'appliquer les fonctions mathématiques du module ``math``.
+* Par contre, il n'est pas possible d'appliquer les fonctions mathématiques du module ``math``.
 
 
 
@@ -133,17 +133,17 @@ Par contre, il n'est pas possible d'appliquer les fonctions mathématiques du mo
    >>> np.exp(a)
    array([ 2.71828183,  7.3890561 , 20.08553692, 54.59815003])
 
-Le module Numpy intégre ses propres fonctions mathématiques.
+* Le module Numpy intégre ses propres fonctions mathématiques.
 
 
 
-Importation et exporter de données
-==================================
+Importation et exportation de données
+=====================================
 
 Fichier CSV
 ~~~~~~~~~~~
 
-La plupart des logiciels de traitement de données (ex. tableur, Regressi, Latis, ...) donne la possibilité d'importer ou d'exporter des données dans un fichier texte au format CSV avec l'extension ``.csv`` ou ``.txt``.
+La plupart des logiciels de traitement de données (ex. tableur, Regressi, Latis, ...) donne la possibilité d'importer ou d'exporter des données dans un **fichier texte au format CSV** avec l'extension ``.csv`` ou ``.txt``.
 
 
 
@@ -174,25 +174,7 @@ s'écrit comme ci-dessous dans un fichier texte au format CSV nommé par exemple
 
 
 Importer un fichier CSV
-=======================
-
-
-
-.. code-block:: python
-
-   >>> import numpy as np
-   >>> np.loadtxt('data.txt',delimiter=',',skiprows=1,)
-   array([[  1.,   5.,   7.],
-       [  2.,  10.,   6.],
-       [  3.,  15.,   5.],
-       [  4.,  20.,   4.]])
-
-* La fonction ``loadtxt()`` importe les données d'un fichier CSV dans un tableau Numpy.
-* ``delimiter=','`` pour signifier que les virgules séparent les valeurs.
-* ``skiprows=1`` pour indiquer que la première ligne ne contient pas de données.
-* Par contre le tableau n'est pas dans le bon sens !
-
-
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -202,7 +184,10 @@ Importer un fichier CSV
        [  5.,  10.,  15.,  20.],
        [  7.,   6.,   5.,   4.]])
 
-L'option ``unpack=True`` transpose le tableau.
+* La fonction ``loadtxt()`` importe les données d'un fichier CSV et renvoie un tableau Numpy.
+* ``delimiter=','`` pour signifier que les virgules séparent les valeurs.
+* ``skiprows=1`` pour indiquer que la première ligne ne contient pas de données.
+* L'option ``unpack=True`` transpose le tableau pour être dans le bon sens.
 
 
 
@@ -218,19 +203,16 @@ L'option ``unpack=True`` transpose le tableau.
    array([7., 6., 5., 4.])
 
 
-Une affectation multiple permet d'obtenir toutes les variables d'un coup (utilisation d'un tuple).
+* Une affectation multiple (utilisation d'un tuple) permet d'obtenir toutes les variables d'un coup.
 
 Export dans un fichier CSV
-==========================
-
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
    import numpy as np
-   a = np.array([1,2,3,4])
-   b = np.array([5,6,7,8])
-   data = np.transpose([a,b])
-   np.savetxt('data2.txt',data,delimiter=',',header='a,b',comments='')
+   a = np.array([1,2,3,4])         # Données de la variable a
+   b = np.array([5,6,7,8])         # Données de la variable b
+   data = np.transpose([a,b])      # Transposition des données
+   np.savetxt('data2.txt',data,delimiter=',',header='a,b',comments='')  # Création du fichier CSV
 
-Il faut penser à transposer le tableau avant !

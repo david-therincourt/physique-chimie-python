@@ -6,86 +6,9 @@ Histogramme d'une série de mesure
 
    Représenter l’histogramme associé à une série de mesures à l’aide d’un tableur ou d'un langage de programmation.
 
-Principe
-========
 
-Le module **matplolib** propose la fonction ``hist()`` pour l'affichage d'un **histogramme** à partir d'un tableau de mesures.
-
-La documentation officielle de cette fonction se trouve `ici <https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.hist.html>`_
-
-Exemple 1
----------
-
-.. code-block:: python
-
-   import numpy as np
-   import matplotlib.pyplot as plt
-
-   x = [5,6,4,7,6,7,6,8,6,5,6,5,3,9,4,6,5,8,7,6]
-
-   plt.hist(x,range=(0,10),bins=10,rwidth = 0.95)
-   plt.show()
-
-:Résultats:
-
-.. image:: images/ultrason_histogramme_1.png
-   :width: 507 px
-   :height: 349 px
-   :scale: 100 %
-   :alt: alternate text
-   :align: center
-
-Les options de la fonction ``hist()`` :
-
-* ``range(0,10)`` fixe les limites de la plage d'étude du tableau de données.
-* ``bins=10`` est le nombre d'intervalles dans la plage d'étude.
-* ``rwidth = 0.95`` fixe la largeur des barres à 95% pour une meilleure visibilité.
-
-Exemple 2
----------
-
-.. code-block:: python
-
-   import numpy as np
-   import matplotlib.pyplot as plt
-
-   x = [5,6,4,7,6,7,6,8,6,5,6,5,3,9,4,6,5,8,7,6]
-
-   freq,valx,opt = plt.hist(x,range=(0,10),bins=10,rwidth = 0.8, align='left')
-   plt.show()
-
-   print("Valeur moyenne = ", np.mean(x))
-   print("Ecart type = ",np.std(x).round(2))
-   print('frequence = ',freq)
-   print('valeurs x = ',valx)
-
-:Résultats:
-
-.. image:: images/ultrason_histogramme_2.png
-   :width: 507 px
-   :height: 349 px
-   :scale: 100 %
-   :alt: alternate text
-   :align: center
-
-.. code-block:: python
-
-   Valeur moyenne =  5.95
-   Ecart type =  1.4309
-   frequence =  [0. 0. 0. 1. 2. 4. 7. 3. 2. 1.]
-   valeurs x =  [ 0.  1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]
-
-* L'option ``align='left'`` permet de centrer les barres.
-* Les fonctions du module Numpy ``mean()`` est ``std()`` calculent respectivement la valeur moyenne et l'écart type.
-
-.. note::
-
-   Le module ``scipy.stats`` fournit un grand nombre de lois de probabilités (Bernoulli, binomiale, normale, ...) et diverses méthodes de calcul (moyenne, médiane, variance, écart type, ...).
-
-   Voir la page `Python pour le calcul scientifique/Statistiques <https://fr.wikibooks.org/wiki/Python_pour_le_calcul_scientifique/Statistiques>`_ sur WikiBooks
-
-Exemples : mesures de la célérité d'un son
-==========================================
+Exemple : mesures de la célérité d'un son
+=========================================
 
 A l'aide d'un émetteur-récepteur ultrasons du type HC-SR04, un microcontrôleur Arduino effectue plusieurs fois la mesure de la célérité du son dans l'air.
 

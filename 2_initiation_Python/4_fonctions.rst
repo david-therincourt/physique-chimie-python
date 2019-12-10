@@ -2,7 +2,10 @@
 Les fonctions
 =============
 
-En programmation, un fonctionne **réalise un traitement** puis **renvoie  la résultat** de ce traitement.
+Principe
+========
+
+En programmation, un fonctionne **réalise un traitement** puis **renvoie le résultat** de ce traitement.
 
 .. code-block:: python
 
@@ -14,11 +17,11 @@ En programmation, un fonctionne **réalise un traitement** puis **renvoie  la r�
    25
 
 * Le mot clé ``def`` est toujours utilisé pour définir une fonction.
-* ``aireCarre`` est le **nom de la fonction**.
+* Ici ``aireCarre`` est le **nom de la fonction**.
 * La variable ``a`` est un **paramètre** (ou argument) de la fonction.
-* Après le caractère ``:``, toutes instructions de la fonction sont **indentés**.
+* Après le caractère ``:``, toutes instructions appartenant à la fonction doivent-être **indentées**.
 * Le mot clé ``return`` est utilisé pour **renvoyer le résultat** de la fonction.
-* Le nom de la fonction est utilisé pour **l'appel** de la fonction.
+* Le nom de la fonction est utilisé lors de **l'appel** de la fonction.
 
 .. code-block:: python
 
@@ -29,11 +32,33 @@ En programmation, un fonctionne **réalise un traitement** puis **renvoie  la r�
    >>> aireRectangle(4,5)
    20
 
-Une fonction peuvent admettre aucun, un ou plusieurs arguments
+* Une fonction peuvent admettre aucun, un ou plusieurs arguments
 
-**Application :** calcul d'énergie mécanique
+Exemple 1 : calcul d'une énergie potentielle
+============================================
 
-Dans un script Python :
+**Définition** de la fonction calculant l'énergie potentielle de pesanteur dans un script Python :
+
+.. code-block:: python
+
+   def Epp(m,h):
+       return m*9.81*h
+
+.. warning:: Ne pas oublier d'exécuter le script Python pour que la fonction soit prise en compte !
+
+**Appel** de la fonction dans l'interpréteur Python :
+
+.. code-block:: Python
+
+   >>> Epp(50,10)
+   4905.0
+
+* Les variables ``m`` et ``h`` sont locales. Elles n'existent que dans la fonction !
+
+Exemple 2 : calcul d'une énergie mécanique
+==========================================
+
+Définitions des fonctions :
 
 .. code-block:: python
 
@@ -46,7 +71,7 @@ Dans un script Python :
    def Em(m,h,v):
        return Epp(m,h)+Ec(m,v)
 
-Résultats dans la console Python :
+Résultats :
 
 .. code-block:: Python
 
@@ -57,4 +82,5 @@ Résultats dans la console Python :
    >>> Em(50,10,13)
    9130.0
 
-Une fonction peut appeler d'autres fonctions !
+* La fonction ``Em()`` fait appel aux deux autres fonctions ``Epp()`` et ``Ec()`` !
+* Pour chaque fonction, la variable ``m`` n'est pas la même. C'est toujours un variable locale.

@@ -57,3 +57,5 @@ Programme Python
    :scale: 100 %
    :alt: alternate text
    :align: center
+
+* La fonction ``quiver()`` permet de tracer un vecteur ou un champ de vecteur.

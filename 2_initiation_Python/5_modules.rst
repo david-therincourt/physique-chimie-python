@@ -26,7 +26,7 @@ https://docs.python.org/3/library/math.html
 * Toutes les autres fonctions mathématiques du module ``math`` sont ainsi disponibles de cette manière.
 
 
-Si le nom du module est trop long à écrire à chaque fois !
+Si le nom du module est trop long à écrire à chaque fois, il est possible de faire comme dans l'exemple suivant :
 
 .. code:: python
 
@@ -38,8 +38,8 @@ Si le nom du module est trop long à écrire à chaque fois !
 
 * ``mt`` est un alias de ``math``.
 
-Importation d'une fonction dans un module
-=========================================
+Importation d'une fonction d'un module
+======================================
 
 .. code:: python
 
@@ -60,7 +60,7 @@ Importation d'une fonction dans un module
    2.718281828459045
 
 * La présence du caractère ``*`` importe toutes les fonctions du module ``math`` ;
-* Mauvaise pratique. **À éviter** ! 
+* Mauvaise pratique **à éviter** tant que possible !
 
 Modules pour les sciences physiques
 ===================================
