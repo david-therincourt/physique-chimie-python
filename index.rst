@@ -14,6 +14,7 @@ Python pour la physique-chimie
    3_SciPy/index
    4_lycee/index
    5_aller_plus_loin/index
+   6_annexes/index
 
 
 
